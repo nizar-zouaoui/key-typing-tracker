@@ -1,6 +1,6 @@
 {
   "name": "@nizar-repo/key-typing-tracker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/nizar-zouaoui/key-typing-tracker.git",
@@ -41,6 +41,10 @@
     }
   },
   "exports": {
+    ".": {
+      "require": "./build/cjs/index.js",
+      "import": "./build/esm/index.js"
+    },
     "./enums": {
       "require": "./build/cjs/enums.js",
       "import": "./build/esm/enums.js"
