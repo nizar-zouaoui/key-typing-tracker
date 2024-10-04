@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "outDir": "build/esm"
+  },
+  "exclude": [
+    "build",
+    "coverage",
+    "node_modules",
+    ".turbo",
+    "coverage",
+    "dist",
+    "**/__test__",
+    "__test__",
+    "__mocks__",
+    "**/__mocks__",
+    "*.config.js",
+    "*.config.ts",
+    ".env",
+    "src/**/*.test.ts",
+    "scripts"
+  ]
+}

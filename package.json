@@ -1,0 +1,57 @@
+{
+  "name": "@nizar-repo/key-typing-tracker",
+  "version": "1.0.1",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/nizar-zouaoui/key-typing-tracker.git",
+    "directory": "key-typing-tracker"
+  },
+  "description": "Undo and redo features for typing text!",
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn build:types",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:types": "tsc --p tsconfig.types.prod.json -emitDeclarationOnly"
+  },
+  "dependencies": {
+    "rimraf": "6.0.1",
+    "tsc": "2.0.4",
+    "typescript": "5.6.2"
+  },
+  "files": [
+    "build/cjs",
+    "build/esm",
+    "build/@types"
+  ],
+  "types": "build/@types",
+  "module": "build/mjs/index.js",
+  "main": "build/cjs/index.js",
+  "typesVersions": {
+    ">=4": {
+      "/enums": [
+        "build/@types/enums"
+      ],
+      "/interface": [
+        "build/@types/interface"
+      ],
+      "/types": [
+        "build/@types/types"
+      ]
+    }
+  },
+  "exports": {
+    "./enums": {
+      "require": "./build/cjs/enums.js",
+      "import": "./build/esm/enums.js"
+    },
+    "./interface": {
+      "require": "./build/cjs/interface.js",
+      "import": "./build/esm/interface.js"
+    },
+    "./types": {
+      "require": "./build/cjs/types.js",
+      "import": "./build/esm/types.js"
+    }
+  }
+}

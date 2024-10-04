@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+
+  "compilerOptions": {
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "target": "ESNext",
+    "noEmit": false,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "declaration": false,
+    "rootDir": ".",
+    "outDir": "build",
+    "sourceMap": false
+  },
+  "include": ["."],
+  "exclude": ["build", "node_modules", ".turbo", "coverage", "dist", "scripts"]
+}

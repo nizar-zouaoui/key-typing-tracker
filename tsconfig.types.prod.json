@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": false,
+    "outDir": "build/@types",
+    "declaration": true
+  },
+  "exclude": [
+    "build",
+    "coverage",
+    "node_modules",
+    ".turbo",
+    "coverage",
+    "dist",
+    "**/__test__",
+    "__test__",
+    "**/__tests__",
+    "__tests__",
+    "__mocks__",
+    "**/__mocks__",
+    "*.config.js",
+    "*.config.ts",
+    ".env",
+    "src/**/*.test.ts"
+  ]
+}
